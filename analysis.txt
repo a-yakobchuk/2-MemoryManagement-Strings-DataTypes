@@ -1,0 +1,22 @@
+Anita Yakobchuk
+Analysis
+
+lab_a.c was ran to see the sizes of primitive data types and demonstrate that C does not guarantee data size.
+
+1) Union was created. The values of the integer did not print as expected. The float printed as expected. This is because since these variables are in a union, the float will overwrite the integer since the float was assigned after the integer.
+
+2)This time the integer and float printed as expected because they are in a struct.
+
+3) The largest is the union integer since it got overwritten by the float so a random large number printed out.
+
+4) Yes are they are all 4 bytes which is what was expected.
+
+For steps 5, 6, and 7 an array of band members was created. A for loop was used to create a run on string and and the string compare function was used to find the index of Ringo which was zero in my array.
+
+In the memory management section, malloc was used to allocate memory of size 12 for text_p and strncpy() was used to add a string of text to text_p. The string printed properly. Realloc was used to allocate more memory for text_p. This time of size 20. strncat() was used to add another string of words to text_p however it did not print the whole string properly because there was not enough memory allocated for the whole statement. The memory block was freed using free()
+
+For lab_d.c the same thing was done as lab_c.c but the strings did not print properly because the unsafe versions of the string functions were used. A segmentation error printed.
+
+The lab_d.c file was debugged using the gdb debugger and the session was outputted to gdb.log
+
+The dynamic arrays file contained CreateDArray(),PushToDArray(), and DestroyDArray() which were modified and tested using the build and test files. CreateDArray() initialized the variables of DArray and allocated memory was allocated for the Payload variable. PushToDArray() reallocated more memory for the array if it was necessary and it concatenated strings to the array. DestroyDArray() put the array back on the heap using free and clearing that memory block. 

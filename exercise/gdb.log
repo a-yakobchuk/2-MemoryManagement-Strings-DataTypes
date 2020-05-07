@@ -1,0 +1,40 @@
+Breakpoint 1 at 0x40065d: file lab_d.c, line 27.
+No symbol "text_p" in current context.
+The program is not being run.
+Starting program: /home/aky8669/lab02/lab02/exercise/lab_d 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd788) at lab_d.c:27
+27	text_p = (char *) malloc(12 * sizeof(char));
+Missing separate debuginfos, use: debuginfo-install glibc-2.17-292.el7.x86_64
+$1 = 0x400560 <_start> "1\355I\211\321^H\211\342H\203\344\360PTI\307\300\360\a@"
+29	if( text_p==NULL)  { 
+Continuing.
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff7a43377 in raise () from /lib64/libc.so.6
+Missing separate debuginfos, use: debuginfo-install libgcc-4.8.5-39.el7.x86_64
+#0  0x00007ffff7a43377 in raise () from /lib64/libc.so.6
+#1  0x00007ffff7a44a68 in abort () from /lib64/libc.so.6
+#2  0x00007ffff7a85ec7 in __libc_message () from /lib64/libc.so.6
+#3  0x00007ffff7a8e6b9 in _int_free () from /lib64/libc.so.6
+#4  0x0000000000400765 in main (argc=1, argv=0x7fffffffd788) at lab_d.c:48
+Breakpoint 2 at 0x400759: file lab_d.c, line 48.
+The program being debugged has been started already.
+Start it from the beginning? (y or n) 
+Starting program: /home/aky8669/lab02/lab02/exercise/lab_d 
+
+Breakpoint 1, main (argc=1, argv=0x7fffffffd788) at lab_d.c:27
+27	text_p = (char *) malloc(12 * sizeof(char));
+29	if( text_p==NULL)  { 
+Continuing.
+
+Breakpoint 2, main (argc=1, argv=0x7fffffffd788) at lab_d.c:48
+48	free(text_p);  
+
+Program received signal SIGABRT, Aborted.
+0x00007ffff7a43377 in raise () from /lib64/libc.so.6
+A debugging session is active.
+
+	Inferior 1 [process 31031] will be killed.
+
+Quit anyway? (y or n) 

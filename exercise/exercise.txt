@@ -1,0 +1,3 @@
+Size of aUnion  :2, aUnion.number:0xffee
+Size of aUnion_P:8, aUnion_P->number:0xffee
+
