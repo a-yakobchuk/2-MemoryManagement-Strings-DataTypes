@@ -17,16 +17,17 @@ if(DArrayHead->Payload == NULL) {
 unsigned int PushToDArray(DArray *DArrayHead, Data *Payload){
 if(DArrayHead->Capacity == DArrayHead->EntriesUsed) {
 	DArrayHead->Capacity = DArrayHead->Capacity + GROWTH_AMOUNT;
-	DArrayHead->Payload = realloc(DArrayHead->Payload,DArrayHead->Capacity + GROWTH_AMOUNT);
+	DArrayHead->Payload = realloc(DArrayHead->Payload,DArrayHead->Capacity + sizeof(Data));
 }
 if(DArrayHead->Payload == NULL){
-	fprintf(stderr,"error to stderr");
+	fprintf(stderr,"error, payload NULL");
 	exit(1);
 }
 memcpy(&(DArrayHead->Payload[DArrayHead->EntriesUsed]),Payload,sizeof(Data) );
 DArrayHead->EntriesUsed = DArrayHead->EntriesUsed + 1;
 return DArrayHead->EntriesUsed - 1;
 }
+
 
 void DestroyDArray(DArray *DArrayHead){
 DArrayHead->Capacity = 0;
